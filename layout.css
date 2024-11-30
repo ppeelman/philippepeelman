@@ -1,0 +1,52 @@
+body {
+    position: relative;
+
+    /* Content is center aligned*/
+    margin: 0 auto;
+    width: min(110ch, 100%);
+
+    /* The center column contains 2 columns */
+    display: grid;
+    --golden-ratio: 1.618;
+    grid-template-columns: 1fr calc(100% / var(--golden-ratio));
+    min-height: 100vh;
+}
+
+main {
+    padding: 3rem 3rem;
+}
+
+
+/* Aside */
+
+aside section {
+    padding: 1.5rem 2.25rem;
+}
+
+/* Definition list (dl) */
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 1em;
+    align-items: center;
+}
+
+dt, dd {
+    margin-block: .25em;
+    margin-inline: 0;
+}
+
+dt img {
+    width: 25px;
+}
+
+dl.languages {
+    margin-block: 1em;
+    grid-template-columns: auto 1fr auto;
+}
+
+.languages dd.separator {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 1px;
+}

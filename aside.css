@@ -1,0 +1,13 @@
+aside {
+    background: linear-gradient(to bottom, #005473, #00384D);
+    overflow: hidden;
+}
+
+.photo img {
+    max-width: 125%;
+    max-height: 350px;
+    mask-image: url("./assets/mask.svg");
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    transform: scale(1.1) translateX(-10%);
+}
