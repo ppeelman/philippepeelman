@@ -50,7 +50,7 @@ dl {
 }
 
 dt, dd {
-    margin-block: .25em;
+    margin-block: .5em;
     margin-inline: 0;
 }
 
@@ -66,4 +66,9 @@ dl.languages {
 .languages dd.separator {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     height: 1px;
+}
+
+.contact-information dt {
+    display: grid;
+    place-content: center;
 }
