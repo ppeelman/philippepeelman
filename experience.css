@@ -1,0 +1,52 @@
+.experience {
+    padding-left: 0;
+    list-style-type: none;
+    font-size: .9rem;
+}
+
+.experience > li:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.experience__metadata {
+    display: flex;
+    align-items: center;
+}
+
+.experience p {
+    margin-block: .33rem;
+}
+
+.experience time {
+    text-transform: uppercase;
+    margin-right: auto;
+}
+
+.experience img {
+    height: 1.25em;
+}
+
+.experience img:not(:last-of-type) {
+    margin-right: 1ch;
+}
+
+.experience__title {
+    font-size: 1.1rem;
+    color: var(--text-primary-color);
+}
+
+.experience__company {
+    font-weight: 900;
+}
+
+.experience__role::before {
+    --margin: .25rem;
+    content: ">";
+    margin-inline-start: var(--margin);
+    margin-inline-end: calc(var(--margin) + .5ch);
+    font-weight: 400;
+}
+
+.experience__description li {
+    margin-bottom: .33rem;
+}

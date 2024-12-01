@@ -17,10 +17,12 @@ main {
 }
 
 
-/* Aside */
+section {
+    padding-block: 1.5rem;
+}
 
 aside section {
-    padding: 1.5rem 2.25rem;
+    padding-inline: 2.5rem;
 }
 
 /* Definition list (dl) */
