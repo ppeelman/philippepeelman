@@ -12,17 +12,32 @@ body {
     min-height: 100vh;
 }
 
+
 main {
-    padding: 3rem 3rem;
+    padding: clamp(2%, 2.5rem, 7%);
 }
 
-
 section {
-    padding-block: 1.5rem;
+    padding-block: 1.25rem;
+}
+
+main section:last-child {
+    padding-block-end: 0;
 }
 
 aside section {
-    padding-inline: 2.5rem;
+    padding-inline: clamp(2%, 2.5rem, 7%);
+}
+
+
+@media (max-width: 625px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding-block: 1rem;
+    }
 }
 
 /* Definition list (dl) */

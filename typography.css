@@ -12,7 +12,7 @@ body {
     line-height: 1.5;
 }
 
-:is(h1, h2, h3, p, li) {
+:is(h1, h2, h3, p, li, a) {
     overflow-wrap: break-word; /* Help prevent overflow of long words/names/URLs */
     hyphens: auto;
 }
@@ -80,4 +80,8 @@ aside :is(h1, h2, h3) {
 
 .text-secondary {
     color: var(--text-secondary-color);
+}
+
+aside .text-secondary {
+    color: rgba(255, 255, 255, 0.75)
 }
