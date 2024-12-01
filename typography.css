@@ -14,7 +14,6 @@ body {
 
 :is(h1, h2, h3, p, li, a) {
     overflow-wrap: break-word; /* Help prevent overflow of long words/names/URLs */
-    hyphens: auto;
 }
 
 h1, .h1 {
