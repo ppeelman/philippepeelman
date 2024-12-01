@@ -42,16 +42,25 @@
         <h3>Programming languages</h3>
 
         <label for="js-ts">JavaScript / TypeScript</label>
-        <meter id="js-ts" min="0" max="100" value="90"></meter>
+        <div id="js-ts" class="meter">
+            <div class="meter__inner" style="--percentage: 90"></div>
+        </div>
 
         <label for="html-css">HTML / CSS</label>
-        <meter id="html-css" min="0" max="100" value="90"></meter>
+
+        <div id="html-css" class="meter">
+            <div class="meter__inner" style="--percentage: 90"></div>
+        </div>
 
         <label for="java-kotlin">Java / Kotlin</label>
-        <meter id="java-kotlin" min="0" max="100" value="60"></meter>
+        <div id="java-kotlin" class="meter">
+            <div class="meter__inner" style="--percentage: 60"></div>
+        </div>
 
         <label for="python">Python</label>
-        <meter id="python" min="0" max="100" value="50"></meter>
+        <div id="python" class="meter">
+            <div class="meter__inner" style="--percentage: 50"></div>
+        </div>
     </section>
 
     <section>
@@ -246,5 +255,16 @@
         </ul>
     </section>
 </main>
+
+<script>
+    window.onload = function () {
+        const meters = document.querySelectorAll('.meter');
+
+        meters.forEach(meter => {
+            meter.classList.add('mounted');
+        });
+
+    }
+</script>
 </body>
 </html>
