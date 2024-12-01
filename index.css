@@ -93,6 +93,7 @@ meter {
     display: block;
     width: 100%;
     height: 12px;
+    border: 0;
 }
 
 meter::-webkit-meter-bar {
