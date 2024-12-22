@@ -1,8 +1,8 @@
 .theme-switcher {
     position: absolute;
     z-index: 10;
-    top: 2rem;
-    right: 2rem;
+    top: 4vmin;
+    right: 4vmin;
 }
 
 .light-mode,
@@ -27,6 +27,8 @@
     display: none;
 }
 
-.theme-switcher input:not(:checked) + label .light-mode {
-    fill: white;
+@media screen and (min-width: 625px) {
+    .theme-switcher input:not(:checked) + label .light-mode {
+        fill: white;
+    }
 }
