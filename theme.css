@@ -28,14 +28,14 @@
     cursor: pointer;
 }
 
-.theme-switcher input:checked + label .light-mode {
-    display: none;
-}
-
-.theme-switcher input:not(:checked) + label .dark-mode {
+.theme-switcher input:checked + label .dark-mode {
     display: none;
 }
 
 .theme-switcher input:not(:checked) + label .light-mode {
+    display: none;
+}
+
+.theme-switcher input:not(:checked) + label .dark-mode {
     fill: white;
 }
