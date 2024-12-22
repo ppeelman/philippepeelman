@@ -2,6 +2,7 @@
 @import './layout.css';
 @import "./experience.css";
 @import "./utilities.css";
+@import "./theme.css";
 
 :root {
     /* Typography */
@@ -9,19 +10,33 @@
     --headline-2: 1.75rem;
     --headline-3: 1.25rem;
 
+    color-scheme: light dark;
+
+    &:has(input[name="color-scheme"]:checked) {
+        color-scheme: light;
+    }
+
+    &:has(input[name="color-scheme"]:not(:checked)) {
+        color-scheme: dark;
+    }
+
     /* Colors */
-    --primary-color: #00455E;
-    --text-primary-color: #1A1A1A;
-    --text-secondary-color: #5F5F5F;
-    --background-color: #f2f2f2;
-    --foreground-color: #FFFFFF;
+    --primary-color: light-dark(#00455E, #0096bf);
+    --primary-gradient-start: light-dark(#005473, #002f40);
+    --primary-gradient-end: light-dark(#00384D, #001c26);
+    --text-primary-color: light-dark(#1A1A1A, #ffffff);
+    --text-secondary-color: light-dark(#5F5F5F, rgba(255, 255, 255, 0.8));
+    --background-color: light-dark(#f2f2f2, #00121a);
+    --foreground-color: light-dark(#FFFFFF, #00090d);
 
     /* Shadows (https://www.joshwcomeau.com/shadow-palette/) */
-    --shadow-color: 0deg 0% 62%;
+    --shadow-color: light-dark(0deg 0% 62%, 0, 0%, 18%);
 
     --shadow-elevation: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
     0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
     1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+
+
 }
 
 html {
@@ -38,7 +53,7 @@ main {
 }
 
 aside {
-    background: linear-gradient(to bottom, #005473, #00384D);
+    background: linear-gradient(to bottom, var(--primary-gradient-start), var(--primary-gradient-end));
     overflow: hidden;
 }
 
@@ -50,7 +65,6 @@ aside {
     mask-size: 100%;
     transform: scale(1.1) translateX(-10%);
 }
-
 
 /* Link */
 
@@ -93,6 +107,6 @@ aside a {
     transition: width .5s ease-in-out;
 }
 
-.meter.mounted .meter__inner {
+.mounted .meter__inner {
     width: calc(var(--percentage) * 1%);
 }

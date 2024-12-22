@@ -1,0 +1,32 @@
+.theme-switcher {
+    position: absolute;
+    z-index: 10;
+    top: 2rem;
+    right: 2rem;
+}
+
+.light-mode,
+.dark-mode {
+    transition: transform .5s ease;
+}
+
+.dark-mode:hover,
+.light-mode:hover {
+    transform: rotate(20deg);
+}
+
+.theme-switcher label {
+    cursor: pointer;
+}
+
+.theme-switcher input:checked + label .light-mode {
+    display: none;
+}
+
+.theme-switcher input:not(:checked) + label .dark-mode {
+    display: none;
+}
+
+.theme-switcher input:not(:checked) + label .light-mode {
+    fill: white;
+}
