@@ -1,8 +1,18 @@
 .theme-switcher {
-    position: absolute;
+    --size: 60px;
+    position: fixed;
     z-index: 10;
     top: 4vmin;
     right: 4vmin;
+
+    background-color: var(--background-color);
+    border-radius: 50%;
+    width: var(--size);
+    height: var(--size);
+
+    display: grid;
+    place-items: center;
+    place-content: center;
 }
 
 .light-mode,
@@ -27,8 +37,6 @@
     display: none;
 }
 
-@media screen and (min-width: 625px) {
-    .theme-switcher input:not(:checked) + label .light-mode {
-        fill: white;
-    }
+.theme-switcher input:not(:checked) + label .light-mode {
+    fill: white;
 }
