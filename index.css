@@ -27,7 +27,8 @@
     --text-primary-color: light-dark(#1A1A1A, #ffffff);
     --text-secondary-color: light-dark(#5F5F5F, rgba(255, 255, 255, 0.8));
     --background-color: light-dark(#f2f2f2, #00121a);
-    --foreground-color: light-dark(#FFFFFF, #00090d);
+    --foreground-color: light-dark(hsl(0 0% 100%), hsl(198 100% 3%));
+    --foreground-color-alpha-33: light-dark(hsl(0 0% 100% / 33%), hsl(198 100% 3% / 33%));
 
     /* Shadows (https://www.joshwcomeau.com/shadow-palette/) */
     --shadow-color: light-dark(0deg 0% 62%, 0, 0%, 18%);

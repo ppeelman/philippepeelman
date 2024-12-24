@@ -1,11 +1,11 @@
 .theme-switcher {
-    --size: 60px;
+    --size: 50px;
     position: fixed;
     z-index: 10;
     top: 4vmin;
     right: 4vmin;
-
-    background-color: var(--foreground-color);
+    background-color: var(--foreground-color-alpha-33);
+    backdrop-filter: blur(10px);
     border-radius: 50%;
     width: var(--size);
     height: var(--size);
