@@ -1,14 +1,28 @@
+:root {
+    color-scheme: light dark;
+
+    &:has(input[name="color-scheme"]:checked) {
+        color-scheme: light;
+    }
+
+    &:has(input[name="color-scheme"]:not(:checked)) {
+        color-scheme: dark;
+    }
+}
+
 .theme-switcher {
     --size: 50px;
+    width: var(--size);
+    height: var(--size);
+
     position: fixed;
     z-index: 10;
     top: 4vmin;
     right: 4vmin;
+
     background-color: var(--foreground-color-alpha-33);
     backdrop-filter: blur(10px);
     border-radius: 50%;
-    width: var(--size);
-    height: var(--size);
 
     display: grid;
     place-items: center;

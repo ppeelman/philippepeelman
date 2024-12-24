@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<span id="top" class="visually-hidden">Top of the page</span>
+
 <form class="theme-switcher">
     <input class="visually-hidden" type="checkbox" id="theme-switcher-checkbox" name="color-scheme"/>
     <label for="theme-switcher-checkbox">
@@ -23,6 +25,14 @@
         </svg>
     </label>
 </form>
+
+<div class="scroll-to-top hide-on-desktop">
+    <a class="scroll-to-top__link" href="#top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+            <path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"></path>
+        </svg>
+    </a>
+</div>
 
 <aside>
     <header>

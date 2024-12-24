@@ -10,16 +10,6 @@
     --headline-2: 1.75rem;
     --headline-3: 1.25rem;
 
-    color-scheme: light dark;
-
-    &:has(input[name="color-scheme"]:checked) {
-        color-scheme: light;
-    }
-
-    &:has(input[name="color-scheme"]:not(:checked)) {
-        color-scheme: dark;
-    }
-
     /* Colors */
     --primary-color: light-dark(#00455E, #0096bf);
     --primary-gradient-start: light-dark(#005473, #002f40);
@@ -31,7 +21,7 @@
     --foreground-color-alpha-33: light-dark(hsl(0 0% 100% / 33%), hsl(198 100% 3% / 33%));
 
     /* Shadows (https://www.joshwcomeau.com/shadow-palette/) */
-    --shadow-color: light-dark(0deg 0% 62%, 0, 0%, 18%);
+    --shadow-color: light-dark(0deg 0% 62%, 0deg 0% 18%);
 
     --shadow-elevation: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
     0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
@@ -40,6 +30,7 @@
 
 html {
     scrollbar-color: #00455E var(--background-color);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -108,4 +99,36 @@ aside a {
 
 .mounted .meter__inner {
     width: calc(var(--percentage) * 1%);
+}
+
+/* Scroll to top */
+
+.scroll-to-top {
+    position: absolute;
+    top: 100dvh;
+    right: 4vmin;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.scroll-to-top__link {
+    --size: 50px;
+
+    position: sticky;
+    top: -5rem;
+    transform: translateY(100vh);
+    user-select: none;
+    pointer-events: all;
+
+    display: grid;
+    place-content: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: var(--foreground-color-alpha-33);
+    backdrop-filter: blur(10px);
+}
+
+.scroll-to-top svg {
+    fill: var(--text-primary-color);
 }
